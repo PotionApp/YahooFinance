@@ -1,0 +1,1207 @@
+{
+  "defaultKeyStatistics": {
+    "annualHoldingsTurnover": {},
+    "enterpriseToRevenue": {
+      "raw": 10.283,
+      "fmt": "10.28"
+    },
+    "beta3Year": {},
+    "profitMargins": {
+      "raw": 0.33356997,
+      "fmt": "33.36%"
+    },
+    "enterpriseToEbitda": {
+      "raw": 22.254,
+      "fmt": "22.25"
+    },
+    "52WeekChange": {
+      "raw": 0.4163884,
+      "fmt": "41.64%"
+    },
+    "morningStarRiskRating": {},
+    "forwardEps": {
+      "raw": 6.22,
+      "fmt": "6.22"
+    },
+    "revenueQuarterlyGrowth": {},
+    "sharesOutstanding": {
+      "raw": 7583439872,
+      "fmt": "7.58B",
+      "longFmt": "7,583,439,872"
+    },
+    "fundInceptionDate": {},
+    "annualReportExpenseRatio": {},
+    "totalAssets": {},
+    "bookValue": {
+      "raw": 15.086,
+      "fmt": "15.09"
+    },
+    "sharesShort": {
+      "raw": 40829581,
+      "fmt": "40.83M",
+      "longFmt": "40,829,581"
+    },
+    "sharesPercentSharesOut": {
+      "raw": 0.0054,
+      "fmt": "0.54%"
+    },
+    "fundFamily": null,
+    "lastFiscalYearEnd": {
+      "raw": 1561852800,
+      "fmt": "2019-06-30"
+    },
+    "heldPercentInstitutions": {
+      "raw": 0.74093,
+      "fmt": "74.09%"
+    },
+    "netIncomeToCommon": {
+      "raw": 46265999360,
+      "fmt": "46.27B",
+      "longFmt": "46,265,999,360"
+    },
+    "trailingEps": {
+      "raw": 6.002,
+      "fmt": "6.00"
+    },
+    "lastDividendValue": {},
+    "SandP52WeekChange": {
+      "raw": 0.051739097,
+      "fmt": "5.17%"
+    },
+    "priceToBook": {
+      "raw": 12.935834,
+      "fmt": "12.94"
+    },
+    "heldPercentInsiders": {
+      "raw": 0.014249999,
+      "fmt": "1.42%"
+    },
+    "nextFiscalYearEnd": {
+      "raw": 1625011200,
+      "fmt": "2021-06-30"
+    },
+    "yield": {},
+    "mostRecentQuarter": {
+      "raw": 1585612800,
+      "fmt": "2020-03-31"
+    },
+    "shortRatio": {
+      "raw": 1.13,
+      "fmt": "1.13"
+    },
+    "sharesShortPreviousMonthDate": {
+      "raw": 1588204800,
+      "fmt": "2020-04-30"
+    },
+    "floatShares": {
+      "raw": 7472267013,
+      "fmt": "7.47B",
+      "longFmt": "7,472,267,013"
+    },
+    "beta": {
+      "raw": 0.925537,
+      "fmt": "0.93"
+    },
+    "enterpriseValue": {
+      "raw": 1426291425280,
+      "fmt": "1.43T",
+      "longFmt": "1,426,291,425,280"
+    },
+    "priceHint": {
+      "raw": 2,
+      "fmt": "2",
+      "longFmt": "2"
+    },
+    "threeYearAverageReturn": {},
+    "lastSplitDate": {
+      "raw": 1045526400,
+      "fmt": "2003-02-18"
+    },
+    "lastSplitFactor": "2:1",
+    "legalType": null,
+    "morningStarOverallRating": {},
+    "earningsQuarterlyGrowth": {
+      "raw": 0.221,
+      "fmt": "22.10%"
+    },
+    "priceToSalesTrailing12Months": {},
+    "dateShortInterest": {
+      "raw": 1590710400,
+      "fmt": "2020-05-29"
+    },
+    "pegRatio": {
+      "raw": 2.27,
+      "fmt": "2.27"
+    },
+    "ytdReturn": {},
+    "forwardPE": {
+      "raw": 31.374598,
+      "fmt": "31.37"
+    },
+    "maxAge": 1,
+    "lastCapGain": {},
+    "shortPercentOfFloat": {
+      "raw": 0.0055,
+      "fmt": "0.55%"
+    },
+    "sharesShortPriorMonth": {
+      "raw": 47763253,
+      "fmt": "47.76M",
+      "longFmt": "47,763,253"
+    },
+    "category": null,
+    "fiveYearAverageReturn": {}
+  },
+  "details": {},
+  "summaryProfile": {
+    "zip": "98052",
+    "sector": "Technology",
+    "fullTimeEmployees": 144000,
+    "longBusinessSummary": "Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide. Its Productivity and Business Processes segment offers Office, Exchange, SharePoint, Microsoft Teams, Office 365 Security and Compliance, and Skype for Business, as well as related Client Access Licenses (CAL); Skype, Outlook.com, and OneDrive; LinkedIn that includes Talent and marketing solutions, and subscriptions; and Dynamics 365, a set of cloud-based and on-premises business solutions for small and medium businesses, large organizations, and divisions of enterprises. Its Intelligent Cloud segment licenses SQL and Windows Servers, Visual Studio, System Center, and related CALs; GitHub that provides a collaboration platform and code hosting service for developers; and Azure, a cloud platform. It also provides support services and Microsoft consulting services to assist customers in developing, deploying, and managing Microsoft server and desktop solutions; and training and certification to developers and IT professionals on various Microsoft products. Its More Personal Computing segment offers Windows OEM licensing and other non-volume licensing of the Windows operating system; Windows Commercial, such as volume licensing of the Windows operating system, Windows cloud services, and other Windows commercial offerings; patent licensing; Windows Internet of Things; and MSN advertising. It also provides Microsoft Surface, PC accessories, and other intelligent devices; Gaming, including Xbox hardware, and Xbox software and services; video games and third-party video game royalties; and Search, including Bing and Microsoft advertising. It sells its products through distributors and resellers; and directly through digital marketplaces, online stores, and retail stores. It has strategic partnerships with Humana Inc., Nokia, Telkomsel, Swiss Re, Kubota Corporation, and FedEx Corp. The company was founded in 1975 and is headquartered in Redmond, Washington.",
+    "city": "Redmond",
+    "phone": "425-882-8080",
+    "state": "WA",
+    "country": "United States",
+    "companyOfficers": [],
+    "website": "http://www.microsoft.com",
+    "maxAge": 86400,
+    "address1": "One Microsoft Way",
+    "fax": "425-706-7329",
+    "industry": "Software—Infrastructure"
+  },
+  "recommendationTrend": {
+    "trend": [
+      {
+        "period": "0m",
+        "strongBuy": 14,
+        "buy": 13,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 1
+      }
+    ],
+    "maxAge": 86400
+  },
+  "financialsTemplate": {
+    "code": "N",
+    "maxAge": 1
+  },
+  "majorDirectHolders": {
+    "holders": [],
+    "maxAge": 1
+  },
+  "earnings": {
+    "maxAge": 86400,
+    "earningsChart": {
+      "quarterly": [
+        {
+          "date": "2Q2019",
+          "actual": {
+            "raw": 1.37,
+            "fmt": "1.37"
+          },
+          "estimate": {
+            "raw": 1.21,
+            "fmt": "1.21"
+          }
+        }
+      ],
+      "currentQuarterEstimate": {
+        "raw": 1.39,
+        "fmt": "1.39"
+      },
+      "currentQuarterEstimateDate": "2Q",
+      "currentQuarterEstimateYear": 2020,
+      "earningsDate": [
+        {
+          "raw": 1594857600,
+          "fmt": "2020-07-16"
+        },
+        {
+          "raw": 1595203200,
+          "fmt": "2020-07-20"
+        }
+      ]
+    },
+    "financialsChart": {
+      "yearly": [
+        {
+          "date": 2016,
+          "revenue": {
+            "raw": 91154000000,
+            "fmt": "91.15B",
+            "longFmt": "91,154,000,000"
+          },
+          "earnings": {
+            "raw": 20539000000,
+            "fmt": "20.54B",
+            "longFmt": "20,539,000,000"
+          }
+        }
+      ],
+      "quarterly": [
+        {
+          "date": "2Q2019",
+          "revenue": {
+            "raw": 33717000000,
+            "fmt": "33.72B",
+            "longFmt": "33,717,000,000"
+          },
+          "earnings": {
+            "raw": 13187000000,
+            "fmt": "13.19B",
+            "longFmt": "13,187,000,000"
+          }
+        }
+      ]
+    },
+    "financialCurrency": "USD"
+  },
+  "price": {
+    "quoteSourceName": "Delayed Quote",
+    "regularMarketOpen": {
+      "raw": 198.59,
+      "fmt": "198.59"
+    },
+    "averageDailyVolume3Month": {
+      "raw": 43428251,
+      "fmt": "43.43M",
+      "longFmt": "43,428,251"
+    },
+    "exchange": "NMS",
+    "regularMarketTime": 1592596800,
+    "volume24Hr": {},
+    "regularMarketDayHigh": {
+      "raw": 199.29,
+      "fmt": "199.29"
+    },
+    "shortName": "Microsoft Corporation",
+    "averageDailyVolume10Day": {
+      "raw": 38567575,
+      "fmt": "38.57M",
+      "longFmt": "38,567,575"
+    },
+    "longName": "Microsoft Corporation",
+    "regularMarketChange": {
+      "raw": -1.1700134,
+      "fmt": "-1.17"
+    },
+    "currencySymbol": "$",
+    "regularMarketPreviousClose": {
+      "raw": 196.32,
+      "fmt": "196.32"
+    },
+    "postMarketTime": 1592611010,
+    "preMarketPrice": {},
+    "exchangeDataDelayedBy": 0,
+    "toCurrency": null,
+    "postMarketChange": {
+      "raw": -0.3999939,
+      "fmt": "-0.40"
+    },
+    "postMarketPrice": {
+      "raw": 194.75,
+      "fmt": "194.75"
+    },
+    "exchangeName": "NasdaqGS",
+    "preMarketChange": {},
+    "circulatingSupply": {},
+    "regularMarketDayLow": {
+      "raw": 194.37,
+      "fmt": "194.37"
+    },
+    "priceHint": {
+      "raw": 2,
+      "fmt": "2",
+      "longFmt": "2"
+    },
+    "currency": "USD",
+    "regularMarketPrice": {
+      "raw": 195.15,
+      "fmt": "195.15"
+    },
+    "regularMarketVolume": {
+      "raw": 44441141,
+      "fmt": "44.44M",
+      "longFmt": "44,441,141.00"
+    },
+    "lastMarket": null,
+    "regularMarketSource": "FREE_REALTIME",
+    "openInterest": {},
+    "marketState": "CLOSED",
+    "underlyingSymbol": null,
+    "marketCap": {
+      "raw": 1479908261888,
+      "fmt": "1.48T",
+      "longFmt": "1,479,908,261,888.00"
+    },
+    "quoteType": "EQUITY",
+    "volumeAllCurrencies": {},
+    "postMarketSource": "DELAYED",
+    "strikePrice": {},
+    "symbol": "MSFT",
+    "postMarketChangePercent": {
+      "raw": -0.002049674,
+      "fmt": "-0.20%"
+    },
+    "preMarketSource": "FREE_REALTIME",
+    "maxAge": 1,
+    "fromCurrency": null,
+    "regularMarketChangePercent": {
+      "raw": -0.005959726,
+      "fmt": "-0.60%"
+    }
+  },
+  "fundOwnership": {
+    "maxAge": 1,
+    "ownershipList": [
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1577750400,
+          "fmt": "2019-12-31"
+        },
+        "organization": "Vanguard Total Stock Market Index Fund",
+        "pctHeld": {
+          "raw": 0.028299998,
+          "fmt": "2.83%"
+        },
+        "position": {
+          "raw": 214894399,
+          "fmt": "214.89M",
+          "longFmt": "214,894,399"
+        },
+        "value": {
+          "raw": 33888846722,
+          "fmt": "33.89B",
+          "longFmt": "33,888,846,722"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "Vanguard 500 Index Fund",
+        "pctHeld": {
+          "raw": 0.0207,
+          "fmt": "2.07%"
+        },
+        "position": {
+          "raw": 157045767,
+          "fmt": "157.05M",
+          "longFmt": "157,045,767"
+        },
+        "value": {
+          "raw": 24767687913,
+          "fmt": "24.77B",
+          "longFmt": "24,767,687,913"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "SPDR S&P 500 ETF Trust",
+        "pctHeld": {
+          "raw": 0.0111,
+          "fmt": "1.11%"
+        },
+        "position": {
+          "raw": 84354293,
+          "fmt": "84.35M",
+          "longFmt": "84,354,293"
+        },
+        "value": {
+          "raw": 13303515549,
+          "fmt": "13.3B",
+          "longFmt": "13,303,515,549"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1582934400,
+          "fmt": "2020-02-29"
+        },
+        "organization": "Fidelity 500 Index Fund",
+        "pctHeld": {
+          "raw": 0.009,
+          "fmt": "0.90%"
+        },
+        "position": {
+          "raw": 68163539,
+          "fmt": "68.16M",
+          "longFmt": "68,163,539"
+        },
+        "value": {
+          "raw": 11043174953,
+          "fmt": "11.04B",
+          "longFmt": "11,043,174,953"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "Vanguard Institutional Index Fund-Institutional Index Fund",
+        "pctHeld": {
+          "raw": 0.0089,
+          "fmt": "0.89%"
+        },
+        "position": {
+          "raw": 67508664,
+          "fmt": "67.51M",
+          "longFmt": "67,508,664"
+        },
+        "value": {
+          "raw": 10646791399,
+          "fmt": "10.65B",
+          "longFmt": "10,646,791,399"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1577750400,
+          "fmt": "2019-12-31"
+        },
+        "organization": "Growth Fund Of America Inc",
+        "pctHeld": {
+          "raw": 0.0089,
+          "fmt": "0.89%"
+        },
+        "position": {
+          "raw": 67243365,
+          "fmt": "67.24M",
+          "longFmt": "67,243,365"
+        },
+        "value": {
+          "raw": 10604278660,
+          "fmt": "10.6B",
+          "longFmt": "10,604,278,660"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "Invesco ETF Tr-Invesco QQQ Tr, Series 1 ETF",
+        "pctHeld": {
+          "raw": 0.0083,
+          "fmt": "0.83%"
+        },
+        "position": {
+          "raw": 63243560,
+          "fmt": "63.24M",
+          "longFmt": "63,243,560"
+        },
+        "value": {
+          "raw": 9974141847,
+          "fmt": "9.97B",
+          "longFmt": "9,974,141,847"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "Vanguard Growth Index Fund",
+        "pctHeld": {
+          "raw": 0.0076,
+          "fmt": "0.76%"
+        },
+        "position": {
+          "raw": 57872923,
+          "fmt": "57.87M",
+          "longFmt": "57,872,923"
+        },
+        "value": {
+          "raw": 9127138686,
+          "fmt": "9.13B",
+          "longFmt": "9,127,138,686"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "iShares Core S&P 500 ETF",
+        "pctHeld": {
+          "raw": 0.0076,
+          "fmt": "0.76%"
+        },
+        "position": {
+          "raw": 57570336,
+          "fmt": "57.57M",
+          "longFmt": "57,570,336"
+        },
+        "value": {
+          "raw": 9079417690,
+          "fmt": "9.08B",
+          "longFmt": "9,079,417,690"
+        }
+      },
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1577750400,
+          "fmt": "2019-12-31"
+        },
+        "organization": "Washington Mutual Investors Fund",
+        "pctHeld": {
+          "raw": 0.0066000004,
+          "fmt": "0.66%"
+        },
+        "position": {
+          "raw": 50107814,
+          "fmt": "50.11M",
+          "longFmt": "50,107,814"
+        },
+        "value": {
+          "raw": 7902002267,
+          "fmt": "7.9B",
+          "longFmt": "7,902,002,267"
+        }
+      }
+    ]
+  },
+  "insiderTransactions": {
+    "transactions": [
+      {
+        "filerName": "WALMSLEY EMMA N",
+        "transactionText": "Sale at price 186.05 per share.",
+        "moneyText": "",
+        "ownership": "D",
+        "startDate": {
+          "raw": 1591574400,
+          "fmt": "2020-06-08"
+        },
+        "value": {
+          "raw": 9117,
+          "fmt": "9.12k",
+          "longFmt": "9,117"
+        },
+        "filerRelation": "Director",
+        "shares": {
+          "raw": 49,
+          "fmt": "49",
+          "longFmt": "49"
+        },
+        "filerUrl": "",
+        "maxAge": 1
+      },
+      {
+        "filerName": "PANKE HELMUT",
+        "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+        "moneyText": "",
+        "ownership": "D",
+        "startDate": {
+          "raw": 1517356800,
+          "fmt": "2018-01-31"
+        },
+        "value": {
+          "raw": 0,
+          "fmt": null,
+          "longFmt": "0"
+        },
+        "filerRelation": "Director",
+        "shares": {
+          "raw": 526,
+          "fmt": "526",
+          "longFmt": "526"
+        },
+        "filerUrl": "",
+        "maxAge": 1
+      }
+    ],
+    "maxAge": 1
+  },
+  "insiderHolders": {
+    "holders": [
+      {
+        "maxAge": 1,
+        "name": "BROD FRANK H",
+        "relation": "Officer",
+        "url": "",
+        "transactionDescription": "Sale",
+        "latestTransDate": {
+          "raw": 1588291200,
+          "fmt": "2020-05-01"
+        },
+        "positionDirect": {
+          "raw": 57136,
+          "fmt": "57.14k",
+          "longFmt": "57,136"
+        },
+        "positionDirectDate": {
+          "raw": 1588291200,
+          "fmt": "2020-05-01"
+        }
+      }
+    ],
+    "maxAge": 1
+  },
+  "netSharePurchaseActivity": {
+    "period": "6m",
+    "netPercentInsiderShares": {
+      "raw": 0.0069999998,
+      "fmt": "0.70%"
+    },
+    "netInfoCount": {
+      "raw": 24,
+      "fmt": "24",
+      "longFmt": "24"
+    },
+    "totalInsiderShares": {
+      "raw": 108064016,
+      "fmt": "108.06M",
+      "longFmt": "108,064,016"
+    },
+    "buyInfoShares": {
+      "raw": 1049793,
+      "fmt": "1.05M",
+      "longFmt": "1,049,793"
+    },
+    "buyPercentInsiderShares": {
+      "raw": 0.01,
+      "fmt": "1.00%"
+    },
+    "sellInfoCount": {
+      "raw": 7,
+      "fmt": "7",
+      "longFmt": "7"
+    },
+    "sellInfoShares": {
+      "raw": 341277,
+      "fmt": "341.28k",
+      "longFmt": "341,277"
+    },
+    "sellPercentInsiderShares": {
+      "raw": 0.003,
+      "fmt": "0.30%"
+    },
+    "maxAge": 1,
+    "buyInfoCount": {
+      "raw": 17,
+      "fmt": "17",
+      "longFmt": "17"
+    },
+    "netInfoShares": {
+      "raw": 708516,
+      "fmt": "708.52k",
+      "longFmt": "708,516"
+    }
+  },
+  "majorHoldersBreakdown": {
+    "maxAge": 1,
+    "insidersPercentHeld": {
+      "raw": 0.014249999,
+      "fmt": "1.42%"
+    },
+    "institutionsPercentHeld": {
+      "raw": 0.74093,
+      "fmt": "74.09%"
+    },
+    "institutionsFloatPercentHeld": {
+      "raw": 0.75164,
+      "fmt": "75.16%"
+    },
+    "institutionsCount": {
+      "raw": 4630,
+      "fmt": "4.63k",
+      "longFmt": "4,630"
+    }
+  },
+  "financialData": {
+    "ebitdaMargins": {
+      "raw": 0.46209,
+      "fmt": "46.21%"
+    },
+    "profitMargins": {
+      "raw": 0.33356997,
+      "fmt": "33.36%"
+    },
+    "grossMargins": {
+      "raw": 0.68167996,
+      "fmt": "68.17%"
+    },
+    "operatingCashflow": {
+      "raw": 58110001152,
+      "fmt": "58.11B",
+      "longFmt": "58,110,001,152"
+    },
+    "revenueGrowth": {
+      "raw": 0.146,
+      "fmt": "14.60%"
+    },
+    "operatingMargins": {
+      "raw": 0.3746,
+      "fmt": "37.46%"
+    },
+    "ebitda": {
+      "raw": 64091000832,
+      "fmt": "64.09B",
+      "longFmt": "64,091,000,832"
+    },
+    "targetLowPrice": {
+      "raw": 133,
+      "fmt": "133.00"
+    },
+    "recommendationKey": "buy",
+    "grossProfits": {
+      "raw": 82933000000,
+      "fmt": "82.93B",
+      "longFmt": "82,933,000,000"
+    },
+    "freeCashflow": {
+      "raw": 36196126720,
+      "fmt": "36.2B",
+      "longFmt": "36,196,126,720"
+    },
+    "targetMedianPrice": {
+      "raw": 200,
+      "fmt": "200.00"
+    },
+    "currentPrice": {
+      "raw": 195.15,
+      "fmt": "195.15"
+    },
+    "earningsGrowth": {
+      "raw": 0.228,
+      "fmt": "22.80%"
+    },
+    "currentRatio": {
+      "raw": 2.904,
+      "fmt": "2.90"
+    },
+    "returnOnAssets": {
+      "raw": 0.118360005,
+      "fmt": "11.84%"
+    },
+    "numberOfAnalystOpinions": {
+      "raw": 33,
+      "fmt": "33",
+      "longFmt": "33"
+    },
+    "targetMeanPrice": {
+      "raw": 201.11,
+      "fmt": "201.11"
+    },
+    "debtToEquity": {
+      "raw": 73.384,
+      "fmt": "73.38"
+    },
+    "returnOnEquity": {
+      "raw": 0.44195998,
+      "fmt": "44.20%"
+    },
+    "targetHighPrice": {
+      "raw": 250,
+      "fmt": "250.00"
+    },
+    "totalCash": {
+      "raw": 137642000384,
+      "fmt": "137.64B",
+      "longFmt": "137,642,000,384"
+    },
+    "totalDebt": {
+      "raw": 84024999936,
+      "fmt": "84.02B",
+      "longFmt": "84,024,999,936"
+    },
+    "totalRevenue": {
+      "raw": 138698997760,
+      "fmt": "138.7B",
+      "longFmt": "138,698,997,760"
+    },
+    "totalCashPerShare": {
+      "raw": 18.15,
+      "fmt": "18.15"
+    },
+    "financialCurrency": "USD",
+    "maxAge": 86400,
+    "revenuePerShare": {
+      "raw": 18.183,
+      "fmt": "18.18"
+    },
+    "quickRatio": {
+      "raw": 2.731,
+      "fmt": "2.73"
+    },
+    "recommendationMean": {
+      "raw": 1.7,
+      "fmt": "1.70"
+    }
+  },
+  "quoteType": {
+    "exchange": "NMS",
+    "shortName": "Microsoft Corporation",
+    "longName": "Microsoft Corporation",
+    "exchangeTimezoneName": "America/New_York",
+    "exchangeTimezoneShortName": "EDT",
+    "isEsgPopulated": false,
+    "gmtOffSetMilliseconds": "-14400000",
+    "quoteType": "EQUITY",
+    "symbol": "MSFT",
+    "messageBoardId": "finmb_21835",
+    "market": "us_market"
+  },
+  "institutionOwnership": {
+    "maxAge": 1,
+    "ownershipList": [
+      {
+        "maxAge": 1,
+        "reportDate": {
+          "raw": 1585612800,
+          "fmt": "2020-03-31"
+        },
+        "organization": "Vanguard Group, Inc. (The)",
+        "pctHeld": {
+          "raw": 0.0844,
+          "fmt": "8.44%"
+        },
+        "position": {
+          "raw": 640172572,
+          "fmt": "640.17M",
+          "longFmt": "640,172,572"
+        },
+        "value": {
+          "raw": 100961616330,
+          "fmt": "100.96B",
+          "longFmt": "100,961,616,330"
+        }
+      }
+    ]
+  },
+  "calendarEvents": {
+    "maxAge": 1,
+    "earnings": {
+      "earningsDate": [
+        {
+          "raw": 1594857600,
+          "fmt": "2020-07-16"
+        },
+        {
+          "raw": 1595203200,
+          "fmt": "2020-07-20"
+        }
+      ],
+      "earningsAverage": {
+        "raw": 1.39,
+        "fmt": "1.39"
+      },
+      "earningsLow": {
+        "raw": 1.35,
+        "fmt": "1.35"
+      },
+      "earningsHigh": {
+        "raw": 1.51,
+        "fmt": "1.51"
+      },
+      "revenueAverage": {
+        "raw": 36496300000,
+        "fmt": "36.5B",
+        "longFmt": "36,496,300,000"
+      },
+      "revenueLow": {
+        "raw": 36053000000,
+        "fmt": "36.05B",
+        "longFmt": "36,053,000,000"
+      },
+      "revenueHigh": {
+        "raw": 37098000000,
+        "fmt": "37.1B",
+        "longFmt": "37,098,000,000"
+      }
+    },
+    "exDividendDate": {
+      "raw": 1597795200,
+      "fmt": "2020-08-19"
+    },
+    "dividendDate": {
+      "raw": 1591833600,
+      "fmt": "2020-06-11"
+    }
+  },
+  "summaryDetail": {
+    "previousClose": {
+      "raw": 196.32,
+      "fmt": "196.32"
+    },
+    "regularMarketOpen": {
+      "raw": 198.59,
+      "fmt": "198.59"
+    },
+    "twoHundredDayAverage": {
+      "raw": 168.99413,
+      "fmt": "168.99"
+    },
+    "trailingAnnualDividendYield": {
+      "raw": 0.010136511,
+      "fmt": "1.01%"
+    },
+    "payoutRatio": {
+      "raw": 0.3233,
+      "fmt": "32.33%"
+    },
+    "volume24Hr": {},
+    "regularMarketDayHigh": {
+      "raw": 199.29,
+      "fmt": "199.29"
+    },
+    "navPrice": {},
+    "averageDailyVolume10Day": {
+      "raw": 38567575,
+      "fmt": "38.57M",
+      "longFmt": "38,567,575"
+    },
+    "totalAssets": {},
+    "regularMarketPreviousClose": {
+      "raw": 196.32,
+      "fmt": "196.32"
+    },
+    "fiftyDayAverage": {
+      "raw": 185.35143,
+      "fmt": "185.35"
+    },
+    "trailingAnnualDividendRate": {
+      "raw": 1.99,
+      "fmt": "1.99"
+    },
+    "open": {
+      "raw": 198.59,
+      "fmt": "198.59"
+    },
+    "toCurrency": null,
+    "averageVolume10days": {
+      "raw": 38567575,
+      "fmt": "38.57M",
+      "longFmt": "38,567,575"
+    },
+    "expireDate": {},
+    "yield": {},
+    "algorithm": null,
+    "dividendRate": {
+      "raw": 2.04,
+      "fmt": "2.04"
+    },
+    "exDividendDate": {
+      "raw": 1597795200,
+      "fmt": "2020-08-19"
+    },
+    "beta": {
+      "raw": 0.925537,
+      "fmt": "0.93"
+    },
+    "circulatingSupply": {},
+    "startDate": {},
+    "regularMarketDayLow": {
+      "raw": 194.37,
+      "fmt": "194.37"
+    },
+    "priceHint": {
+      "raw": 2,
+      "fmt": "2",
+      "longFmt": "2"
+    },
+    "currency": "USD",
+    "trailingPE": {
+      "raw": 32.51416,
+      "fmt": "32.51"
+    },
+    "regularMarketVolume": {
+      "raw": 44441141,
+      "fmt": "44.44M",
+      "longFmt": "44,441,141"
+    },
+    "lastMarket": null,
+    "maxSupply": {},
+    "openInterest": {},
+    "marketCap": {
+      "raw": 1479908261888,
+      "fmt": "1.48T",
+      "longFmt": "1,479,908,261,888"
+    },
+    "volumeAllCurrencies": {},
+    "strikePrice": {},
+    "averageVolume": {
+      "raw": 43428251,
+      "fmt": "43.43M",
+      "longFmt": "43,428,251"
+    },
+    "priceToSalesTrailing12Months": {
+      "raw": 10.669928,
+      "fmt": "10.67"
+    },
+    "dayLow": {
+      "raw": 194.37,
+      "fmt": "194.37"
+    },
+    "ask": {
+      "raw": 194.83,
+      "fmt": "194.83"
+    },
+    "ytdReturn": {},
+    "askSize": {
+      "raw": 1100,
+      "fmt": "1.1k",
+      "longFmt": "1,100"
+    },
+    "volume": {
+      "raw": 44441141,
+      "fmt": "44.44M",
+      "longFmt": "44,441,141"
+    },
+    "fiftyTwoWeekHigh": {
+      "raw": 199.29,
+      "fmt": "199.29"
+    },
+    "forwardPE": {
+      "raw": 31.374598,
+      "fmt": "31.37"
+    },
+    "maxAge": 1,
+    "fromCurrency": null,
+    "fiveYearAvgDividendYield": {
+      "raw": 1.92,
+      "fmt": "1.92"
+    },
+    "fiftyTwoWeekLow": {
+      "raw": 130.78,
+      "fmt": "130.78"
+    },
+    "bid": {
+      "raw": 194.6,
+      "fmt": "194.60"
+    },
+    "tradeable": false,
+    "dividendYield": {
+      "raw": 0.0104,
+      "fmt": "1.04%"
+    },
+    "bidSize": {
+      "raw": 900,
+      "fmt": "900",
+      "longFmt": "900"
+    },
+    "dayHigh": {
+      "raw": 199.29,
+      "fmt": "199.29"
+    }
+  },
+  "symbol": "MSFT",
+  "esgScores": {
+    "palmOil": false,
+    "peerSocialPerformance": {
+      "min": 5.23,
+      "avg": 11.188199999999993,
+      "max": 18.73
+    },
+    "controversialWeapons": false,
+    "ratingMonth": 3,
+    "gambling": false,
+    "socialScore": {
+      "raw": 9.87,
+      "fmt": "9.9"
+    },
+    "nuclear": false,
+    "furLeather": false,
+    "alcoholic": false,
+    "gmo": false,
+    "catholic": false,
+    "socialPercentile": {
+      "raw": 0,
+      "fmt": "0"
+    },
+    "peerGovernancePerformance": {
+      "min": 4.88,
+      "avg": 7.326299999999999,
+      "max": 12.83
+    },
+    "peerCount": 100,
+    "relatedControversy": [
+      "Customer Incidents"
+    ],
+    "governanceScore": {
+      "raw": 5.24,
+      "fmt": "5.2"
+    },
+    "environmentPercentile": {
+      "raw": 0,
+      "fmt": "0"
+    },
+    "animalTesting": false,
+    "peerEsgScorePerformance": {
+      "min": 12.61,
+      "avg": 19.4733,
+      "max": 32.64
+    },
+    "tobacco": false,
+    "totalEsg": {
+      "raw": 15.55,
+      "fmt": "15.6"
+    },
+    "highestControversy": 3,
+    "esgPerformance": "UNDER_PERF",
+    "coal": false,
+    "peerHighestControversyPerformance": {
+      "min": 0,
+      "avg": 1.43,
+      "max": 4
+    },
+    "pesticides": false,
+    "adult": false,
+    "ratingYear": 2020,
+    "maxAge": 86400,
+    "percentile": {
+      "raw": 7.96,
+      "fmt": "8"
+    },
+    "peerGroup": "Software & Services",
+    "smallArms": false,
+    "peerEnvironmentPerformance": {
+      "min": 0,
+      "avg": 0.9602999999999997,
+      "max": 3.33
+    },
+    "environmentScore": {
+      "raw": 0.44,
+      "fmt": "0.4"
+    },
+    "governancePercentile": {
+      "raw": 0,
+      "fmt": "0"
+    },
+    "militaryContract": false
+  },
+  "upgradeDowngradeHistory": {
+    "history": [
+      {
+        "epochGradeDate": 1589809546,
+        "firm": "RBC Capital",
+        "toGrade": "Outperform",
+        "fromGrade": "",
+        "action": "reit"
+      }
+    ],
+    "maxAge": 86400
+  },
+  "pageViews": {
+    "shortTermTrend": "",
+    "midTermTrend": "",
+    "longTermTrend": "",
+    "maxAge": 1
+  }
+}
