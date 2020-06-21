@@ -25,12 +25,15 @@ public class OkHttpCaller {
         {
             ResponseBody responseBody = client.newCall(request).execute().body();
             String json = responseBody.string();
+//            String json = "{\"brand\":\"Jeep\", \"doors\": 3}";
+
             Gson gson = new Gson();
 
             JsonParser parser = new JsonParser();
             JsonElement jsonTree = parser.parse(json);
 
-            NiceTrie trie = NiceTrie.getTrieFrom(jsonTree);
+//            NiceTrie trie = NiceTrie.getTrieFrom(jsonTree);
+
 //            trie.printAllChildren();
 //            System.out.println(trie.getAllKeys());
 //            printTrie(trie);
@@ -83,25 +86,36 @@ public class OkHttpCaller {
             Set<Map.Entry<String, JsonElement>> entries = object.entrySet();
             for(Map.Entry<String, JsonElement> entry: entries)
             {
-                key = key + "." + entry.getKey();
-                System.out.println("Key: " + key);
-                printJsonTree(entry.getValue(), key);
+                String newKey = key + "." + entry.getKey();
+                if (entry.getValue().isJsonPrimitive())
+                {
+                    System.out.println("NewKey: " + newKey);
+                }
+                printJsonTree(entry.getValue(), newKey);
             }
         }
         else
         {
-            JsonArray array = root.getAsJsonArray();
-            for(JsonElement element: array)
+            System.out.println("Key: " + key);
+            System.out.println(root.getAsJsonArray());
+//            JsonArray array = root.getAsJsonArray();
+            /*
+            for(Integer i = 0; i < array.size(); i++)
             {
+                JsonElement element = array.get(i);
                 if(element.isJsonObject())
                 {
                     JsonObject object = element.getAsJsonObject();
                     Set<Map.Entry<String, JsonElement>> entries = object.entrySet();
                     for (Map.Entry<String, JsonElement> entry : entries)
                     {
-                        key = key + "." + entry.getKey();
-                        System.out.println("Key: " + key);
-                        printJsonTree(entry.getValue(), key);
+                        String newKey = key + "." + entry.getKey() + "." + i ;
+
+                        if (entry.getValue().isJsonPrimitive())
+                        {
+                            System.out.println("NewKey: " + newKey);
+                        }
+                        printJsonTree(entry.getValue(), newKey);
                     }
                 }
                 else
@@ -109,6 +123,7 @@ public class OkHttpCaller {
                     System.out.println("Value: " + element);
                 }
             }
+            */
         }
     }
 }
