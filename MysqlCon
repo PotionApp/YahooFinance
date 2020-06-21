@@ -1,0 +1,47 @@
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+class MysqlCon {
+    public static void main(String args[]) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/yahooFinance?useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "password");
+            Statement stmt = con.createStatement();
+            
+            String insertQuery = " INSERT INTO yahooFinance.FinancialData VALUES + ('GOOG',1.5,'Kittu');";
+
+            stmt.executeUpdate(insertQuery);
+
+            PreparedStatement statement;
+            String selectQuery = "select * from yahooFinance.FinancialData";
+
+            statement = con.prepareStatement(selectQuery);
+            ResultSet rs = statement.executeQuery();
+
+            List<HashMap<String, Object>> resultList;
+            resultList = convertResultSetToList(rs);
+            System.out.println(resultList);
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public static List<HashMap<String, Object>> convertResultSetToList(ResultSet rs) throws SQLException {
+        ResultSetMetaData md = rs.getMetaData();
+        int columns = md.getColumnCount();
+        List<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
+
+        while (rs.next()) {
+            HashMap<String, Object> row = new HashMap<String, Object>(columns);
+            for (int i = 1; i <= columns; ++i) {
+                row.put(md.getColumnName(i), rs.getObject(i));
+            }
+            list.add(row);
+        }
+        return list;
+    }
+}
