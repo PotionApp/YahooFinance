@@ -20,42 +20,79 @@ public class OkHttpCaller {
         DatabaseMap map = new DatabaseMap(jsonTree);
 
 
-        System.out.println(map.getSQLcommand("STOCK_SUMMARY_TABLE", SQLcommand.CREATE));
+//        System.out.println(map.getSQLcommand(Constants.STOCK_SUMMARY_TABLE, SQLcommand.CREATE));
+        System.out.println(map.getSQLcommand(Constants.STOCK_SUMMARY_TABLE, SQLcommand.INSERT));
     }
 
     public static class DatabaseMap
     {
         HashMap<String, JsonElement> map = null;
         List<String> keys = null;
+        List<JsonElement> values = null;
 
         DatabaseMap()
         {
             map = new HashMap<String, JsonElement>();
             keys = new ArrayList<String>();
+            values = new ArrayList<JsonElement>();
         }
 
         DatabaseMap(JsonElement root)
         {
             this();
-            generateMap(root, "", map, keys);
+            generateMap(root, "", map);
+            for(Map.Entry<String, JsonElement> entry : map.entrySet())
+            {
+                keys.add(entry.getKey());
+                values.add(entry.getValue());
+            }
         }
 
         public String getSQLcommand(String table, SQLcommand type)
         {
-            String command = type.name + Constants.SPACE + table + Constants.SPACE + Constants.BRACKET_LEFT;
-            for(String key: keys)
+            String command = type.name + Constants.SPACE + table + Constants.SPACE;
+
+            switch(type)
             {
-                command = command + key + Constants.SPACE + "VARCHAR(10)" + Constants.COMMA + Constants.SPACE;
+                case CREATE:
+                    command = command + Constants.BRACKET_LEFT;
+                    for(String key: keys)
+                    {
+                        command = command + key + Constants.SPACE + "VARCHAR(10)" + Constants.COMMA + Constants.SPACE;
+                    }
+                    command = command.substring(0, command.length() - 1);
+                    break;
+                case INSERT:
+                    command = command + Constants.VALUES + Constants.SPACE + Constants.BRACKET_LEFT;
+                    for(JsonElement value: values)
+                    {
+                        command = command + Constants.QUOTE_SINGLE + removeDoubleQuotes(value.toString()) + Constants.QUOTE_SINGLE + Constants.COMMA;
+                    }
+                    break;
+                default:
+                    return command;
             }
-            command = command.substring(0, command.length() - 2) + Constants.BRACKET_RIGHT + Constants.SEMI_COLON;
+            command = command.substring(0, command.length() - 1) + Constants.BRACKET_RIGHT + Constants.SEMI_COLON;
             return command;
+        }
+
+        public String removeDoubleQuotes(String string)
+        {
+            if(string.charAt(0) == Constants.QUOTES_DOUBLE.charAt(0) && string.charAt(string.length()-1) == Constants.QUOTES_DOUBLE.charAt(0))
+            {
+                return string.substring(1,string.length() - 1);
+            }
+            else
+            {
+                return string;
+            }
         }
     }
 
     public enum SQLcommand
     {
         CREATE(Constants.CREATE + Constants.SPACE + Constants.TABLE),
-        INSERT(Constants.INSERT),
+        INSERT(Constants.INSERT + Constants.SPACE + Constants.INTO),
         SELECT(Constants.SELECT);
 
         public String name;
@@ -127,14 +164,22 @@ public class OkHttpCaller {
         public static String INSERT = "INSERT";
         public static String SELECT = "SELECT";
         public static String TABLE = "TABLE";
+        public static String VALUES = "VALUES";
         public static String FROM = "FROM";
         public static String INTO = "INTO";
         public static String WHERE = "WHERE";
         public static String BRACKET_LEFT = "(";
         public static String BRACKET_RIGHT = ")";
+        public static String BRACKET_LEFT_CURLY = "{";
+        public static String BRACKET_RIGHT_CURLY = "}";
         public static String COMMA = ",";
         public static String SEMI_COLON = ";";
+        public static String COLON = ":";
+        public static String QUOTES_DOUBLE = "\"";
+        public static String QUOTE_SINGLE = "'";
 
+        public static String STOCK = "stock";
+        public static String STOCK_SUMMARY_TABLE = "STOCK_SUMMARY_TABLE";
         public static String API_DOJO_BASE_URL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/";
         public static String YAHOO_FINANCE_BASE_URL = "https://yahoo-finance15.p.rapidapi.com/";
         public static String API_DOJO_RAPID_API_HOST = "apidojo-yahoo-finance-v1.p.rapidapi.com";
@@ -226,6 +271,11 @@ public class OkHttpCaller {
         {
             ResponseBody responseBody = client.newCall(request).execute().body();
             String json = responseBody.string();
+            json = json.substring(0, json.length() - 1) + Constants.COMMA +
+                        Constants.QUOTES_DOUBLE + Constants.STOCK + Constants.QUOTES_DOUBLE +
+                        Constants.COLON + Constants.QUOTES_DOUBLE + stock.symbol + Constants.QUOTES_DOUBLE +
+                        Constants.BRACKET_RIGHT_CURLY;
+//            System.out.println(json);
 
             Gson gson = new Gson();
 
@@ -238,7 +288,7 @@ public class OkHttpCaller {
         return jsonTree;
     }
 
-    public static void generateMap(JsonElement root, String key, HashMap<String, JsonElement> map, List<String> keys)
+    public static void generateMap(JsonElement root, String key, HashMap<String, JsonElement> map)
     {
         if(root.isJsonNull())
         {
@@ -247,7 +297,6 @@ public class OkHttpCaller {
 
         if(root.isJsonPrimitive())
         {
-            keys.add(key);
             map.put(key, root);
             return;
         }
@@ -260,15 +309,13 @@ public class OkHttpCaller {
                 String newKey = key + "." + entry.getKey();
                 if (entry.getValue().isJsonPrimitive())
                 {
-                    keys.add(newKey);
                     map.put(newKey, entry.getValue());
                 }
-                generateMap(entry.getValue(), newKey, map, keys);
+                generateMap(entry.getValue(), newKey, map);
             }
         }
         else
         {
-            keys.add(key);
             map.put(key, root);
             return;
         }
