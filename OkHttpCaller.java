@@ -6,44 +6,62 @@ import com.squareup.okhttp.Response;
 import com.squareup.okhttp.ResponseBody;
 import netscape.javascript.JSObject;
 
+import javax.swing.*;
+import javax.xml.crypto.Data;
 import java.io.IOException;
 
 import java.util.*;
 
 public class OkHttpCaller {
 
-    public static void main(String[] args) {
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url("https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary?region=US&symbol=MRNA")
-                .get()
-                .addHeader("x-rapidapi-host", "apidojo-yahoo-finance-v1.p.rapidapi.com")
-                .addHeader("x-rapidapi-key", "635b42af5emshb39964800077642p12a021jsndaeeabe69322")
-                .build();
+    public static void main(String[] args)
+    {
+        JsonElement jsonTree = getDataAsJson(Provider.API_DOJO, Constants.RAPID_API_KEY, Stock.MODERNA);
+        DatabaseMap map = new DatabaseMap(jsonTree);
 
-        try
+        System.out.println(map.getSQLcommand("STOCK_SUMMARY_TABLE", SQLcommand.CREATE));
+    }
+
+    public static class DatabaseMap
+    {
+        HashMap<String, JsonElement> map = null;
+        List<String> keys = null;
+
+        DatabaseMap()
         {
-            ResponseBody responseBody = client.newCall(request).execute().body();
-            String json = responseBody.string();
-//            String json = "{\"brand\":\"Jeep\", \"doors\": 3}";
+            map = new HashMap<String, JsonElement>();
+            keys = new ArrayList<String>();
+        }
 
-            Gson gson = new Gson();
+        DatabaseMap(JsonElement root)
+        {
+            this();
+            generateMap(root, "", map, keys);
+        }
 
-            JsonParser parser = new JsonParser();
-            JsonElement jsonTree = parser.parse(json);
+        public String getSQLcommand(String table, SQLcommand type)
+        {
+            String command = type.name + Constants.SPACE + table + Constants.SPACE + Constants.BRACKET_LEFT;
+            for(String key: keys)
+            {
+                command = command + key + Constants.SPACE + "VARCHAR(10)" + Constants.COMMA + Constants.SPACE;
+            }
+            command = command + Constants.SEMI_COLON;
+            return command;
+        }
+    }
 
-//            NiceTrie trie = NiceTrie.getTrieFrom(jsonTree);
+    public enum SQLcommand
+    {
+        CREATE(Constants.CREATE + Constants.SPACE + Constants.TABLE),
+        INSERT(Constants.INSERT),
+        SELECT(Constants.SELECT);
 
-//            trie.printAllChildren();
-//            System.out.println(trie.getAllKeys());
-//            printTrie(trie);
-//            String[] keyMap = {"earnings", "earningsChart", "currentQuarterEstimate", "raw"};
-//            System.out.println(GsonMethods.getJsonElement(keyMap, 0, jsonTree));
-            printJsonTree(jsonTree, "");
+        public String name;
 
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        SQLcommand(String name)
+        {
+            this.name = name;
         }
     }
 
@@ -64,7 +82,6 @@ public class OkHttpCaller {
                 String nextKey = iter.next();
                 System.out.println("Next Key: " + nextKey);
                 next = root.children.get(nextKey);
-//                System.out.println(next.getAllKeys());
                 printTrie(next);
             }
         }
@@ -98,32 +115,158 @@ public class OkHttpCaller {
         {
             System.out.println("Key: " + key);
             System.out.println(root.getAsJsonArray());
-//            JsonArray array = root.getAsJsonArray();
-            /*
-            for(Integer i = 0; i < array.size(); i++)
-            {
-                JsonElement element = array.get(i);
-                if(element.isJsonObject())
-                {
-                    JsonObject object = element.getAsJsonObject();
-                    Set<Map.Entry<String, JsonElement>> entries = object.entrySet();
-                    for (Map.Entry<String, JsonElement> entry : entries)
-                    {
-                        String newKey = key + "." + entry.getKey() + "." + i ;
+        }
+    }
 
-                        if (entry.getValue().isJsonPrimitive())
-                        {
-                            System.out.println("NewKey: " + newKey);
-                        }
-                        printJsonTree(entry.getValue(), newKey);
-                    }
-                }
-                else
+    public static class Constants
+    {
+        public static String SPACE = " ";
+        public static String STAR = "*";
+        public static String CREATE = "CREATE";
+        public static String INSERT = "INSERT";
+        public static String SELECT = "SELECT";
+        public static String TABLE = "TABLE";
+        public static String BRACKET_LEFT = "(";
+        public static String BRACKET_RIGHT = "(";
+        public static String COMMA = ",";
+        public static String SEMI_COLON = ";";
+
+        public static String API_DOJO_BASE_URL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/";
+        public static String YAHOO_FINANCE_BASE_URL = "https://yahoo-finance15.p.rapidapi.com/";
+        public static String API_DOJO_RAPID_API_HOST = "apidojo-yahoo-finance-v1.p.rapidapi.com";
+        public static String YAHOO_FINANCE_RAPID_API_HOST = "yahoo-finance15.p.rapidapi.com";
+        public static String RAPID_API_HOST_IDENTIFIER = "x-rapidapi-host";
+        public static String RAPID_API_KEY_IDENTIFIER = "x-rapidapi-key";
+
+        public static String RAPID_API_KEY = "635b42af5emshb39964800077642p12a021jsndaeeabe69322";
+    }
+
+
+
+    public enum Provider
+    {
+        API_DOJO(Constants.API_DOJO_BASE_URL, Constants.API_DOJO_RAPID_API_HOST),
+        YAHOO_FINANCE(Constants.YAHOO_FINANCE_BASE_URL, Constants.YAHOO_FINANCE_RAPID_API_HOST);
+
+        public String baseURL;
+        public String rapidAPIhost;
+
+        Provider(String baseURL, String rapidAPIhost)
+        {
+            this.baseURL = baseURL;
+            this.rapidAPIhost = rapidAPIhost;
+        }
+
+        public String getAPIurl(Stock stock)
+        {
+            return baseURL + "stock/v2/get-summary?region=US&symbol=" + stock.symbol;
+        }
+    }
+
+    public enum API
+    {
+        STOCK_NEWS,
+        STOCK_SUMMARY,
+        STOCK_HOLDERS,
+        STOCK_FINANCIALS,
+        STOCK_OPTIONS,
+        STOCK_ANALYSIS;
+    }
+
+    public enum Region
+    {
+        US("US", "United States of America"),
+        EU("EU", "European Union"),
+        DE("DE", "Germany"),
+        UK("UK", "United Kingdom");
+
+        public String id;
+        public String name;
+
+        Region(String id, String name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+    }
+
+    public enum Stock
+    {
+        MODERNA("MRNA", "Moderna"),
+        MICROSOFT("MSFT", "Microsoft"),
+        APPLE("AAPL", "Apple");
+
+        public String symbol;
+        public String name;
+
+        Stock(String symbol, String name)
+        {
+            this.symbol = symbol;
+            this.name = name;
+        }
+    }
+
+    public static JsonElement getDataAsJson(Provider provider, String apiKey, Stock stock)
+    {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(provider.getAPIurl(stock))
+                .get()
+                .addHeader(Constants.RAPID_API_HOST_IDENTIFIER, provider.rapidAPIhost)
+                .addHeader(Constants.RAPID_API_KEY_IDENTIFIER, apiKey)
+                .build();
+
+        JsonElement jsonTree = null;
+
+        try
+        {
+            ResponseBody responseBody = client.newCall(request).execute().body();
+            String json = responseBody.string();
+
+            Gson gson = new Gson();
+
+            JsonParser parser = new JsonParser();
+            jsonTree = parser.parse(json);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return jsonTree;
+    }
+
+    public static void generateMap(JsonElement root, String key, HashMap<String, JsonElement> map, List<String> keys)
+    {
+        if(root.isJsonNull())
+        {
+            return;
+        }
+
+        if(root.isJsonPrimitive())
+        {
+            keys.add(key);
+            map.put(key, root);
+            return;
+        }
+        else if (root.isJsonObject())
+        {
+            JsonObject object = root.getAsJsonObject();
+            Set<Map.Entry<String, JsonElement>> entries = object.entrySet();
+            for(Map.Entry<String, JsonElement> entry: entries)
+            {
+                String newKey = key + "." + entry.getKey();
+                if (entry.getValue().isJsonPrimitive())
                 {
-                    System.out.println("Value: " + element);
+                    keys.add(newKey);
+                    map.put(newKey, entry.getValue());
                 }
+                generateMap(entry.getValue(), newKey, map, keys);
             }
-            */
+        }
+        else
+        {
+            keys.add(key);
+            map.put(key, root);
+            return;
         }
     }
 }
