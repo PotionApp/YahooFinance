@@ -20,8 +20,8 @@ public class OkHttpCaller {
         DatabaseMap map = new DatabaseMap(jsonTree);
 
 
-//        System.out.println(map.getSQLcommand(Constants.STOCK_SUMMARY_TABLE, SQLcommand.CREATE));
-        System.out.println(map.getSQLcommand(Constants.STOCK_SUMMARY_TABLE, SQLcommand.INSERT));
+        System.out.println(map.getSQLcommand(Constants.STOCK_SUMMARY_TABLE, SQLcommand.CREATE));
+//        System.out.println(map.getSQLcommand(Constants.STOCK_SUMMARY_TABLE, SQLcommand.INSERT));
     }
 
     public static class DatabaseMap
@@ -48,6 +48,8 @@ public class OkHttpCaller {
             }
         }
 
+
+
         public String getSQLcommand(String table, SQLcommand type)
         {
             String command = type.name + Constants.SPACE + table + Constants.SPACE;
@@ -58,7 +60,7 @@ public class OkHttpCaller {
                     command = command + Constants.BRACKET_LEFT;
                     for(String key: keys)
                     {
-                        command = command + key + Constants.SPACE + "VARCHAR(10)" + Constants.COMMA + Constants.SPACE;
+                        command = command + key + Constants.SPACE + getSQLDataType(map.get(key)).name + Constants.COMMA + Constants.SPACE;
                     }
                     command = command.substring(0, command.length() - 1);
                     break;
@@ -98,6 +100,50 @@ public class OkHttpCaller {
         public String name;
 
         SQLcommand(String name)
+        {
+            this.name = name;
+        }
+    }
+
+    public static SQLDataType getSQLDataType(JsonElement element)
+    {
+        JsonPrimitive primitive = null;
+        if(element.isJsonPrimitive())
+        {
+            primitive = element.getAsJsonPrimitive();
+        }
+        else if(element.isJsonArray())
+        {
+            return SQLDataType.VARCHAR_LONG;
+        }
+
+        if(primitive.isBoolean())
+        {
+            return SQLDataType.BOOLEAN;
+        }
+        else if(primitive.isNumber())
+        {
+            return SQLDataType.DOUBLE;
+        }
+        else if(primitive.isString())
+        {
+            return SQLDataType.VARCHAR;
+        }
+        return SQLDataType.NONE;
+    }
+
+    public enum SQLDataType
+    {
+        BOOLEAN("BOOLEAN"),
+        DOUBLE("DOUBLE(15,2)"),
+        VARCHAR("VARCHAR(20)"),
+        VARCHAR_LONG("VARCHAR(200)"),
+        CHAR("CHAR"),
+        NONE("NONE");
+
+        public String name;
+
+        SQLDataType(String name)
         {
             this.name = name;
         }
