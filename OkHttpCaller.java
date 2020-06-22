@@ -19,6 +19,7 @@ public class OkHttpCaller {
         JsonElement jsonTree = getDataAsJson(Provider.API_DOJO, Constants.RAPID_API_KEY, Stock.MODERNA);
         DatabaseMap map = new DatabaseMap(jsonTree);
 
+
         System.out.println(map.getSQLcommand("STOCK_SUMMARY_TABLE", SQLcommand.CREATE));
     }
 
@@ -46,7 +47,7 @@ public class OkHttpCaller {
             {
                 command = command + key + Constants.SPACE + "VARCHAR(10)" + Constants.COMMA + Constants.SPACE;
             }
-            command = command + Constants.SEMI_COLON;
+            command = command.substring(0, command.length() - 2) + Constants.BRACKET_RIGHT + Constants.SEMI_COLON;
             return command;
         }
     }
@@ -126,8 +127,11 @@ public class OkHttpCaller {
         public static String INSERT = "INSERT";
         public static String SELECT = "SELECT";
         public static String TABLE = "TABLE";
+        public static String FROM = "FROM";
+        public static String INTO = "INTO";
+        public static String WHERE = "WHERE";
         public static String BRACKET_LEFT = "(";
-        public static String BRACKET_RIGHT = "(";
+        public static String BRACKET_RIGHT = ")";
         public static String COMMA = ",";
         public static String SEMI_COLON = ";";
 
